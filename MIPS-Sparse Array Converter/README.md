@@ -26,14 +26,14 @@ for (i=0; i<pin.length; i++)
 ```
 
 ## User's Part
-The user has the following options :
-1. Read Array A 
-2. Read Array B 
-3. Create Sparse Array A 
-4. Create Sparse Array B 
-5. Create Sparse Array C = A + B 
-6. Display Sparse Array A 
-7. Display Sparse Array B 
-8. Display Sparse Array C  
-0. Exit
+The user has the following options :  
+1 Read Array A  
+2 Read Array B   
+3 Create Sparse Array A   
+4 Create Sparse Array B   
+5 Create Sparse Array C = A + B   
+6 Display Sparse Array A   
+7 Display Sparse Array B   
+8 Display Sparse Array C  
+0 Exit
 
