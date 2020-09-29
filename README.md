@@ -7,5 +7,5 @@ Below there's a brief description of each subject.
 ### - Data Structures
 ### - Conceptual Modeling
 ### - SQL Server Databases
-### - Computer System Organization
+### - MIPS-Sparse Array Converter
 ### - Operating Systems
