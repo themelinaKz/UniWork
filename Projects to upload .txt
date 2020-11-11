@@ -1,0 +1,8 @@
+- Data Structures (3 exercises, 3rd semester, 1st Lydia)
+- C++ (maybe not in UniWork, image filter processing project, 3rd semester, Marilena)
+- Computer System Organization (MIPS, 3rd semester)
+- Operating Systems (theater project, 4th semester, Stella + Lydia)
+- Artificial Intelligence (maybe not in UniWork, 5th semester, Marilena+Foivos)
+- Conceptual Modeling (6th semester, alone+Lydia)
+- SQL Server Databases (6th semester, alone)
+

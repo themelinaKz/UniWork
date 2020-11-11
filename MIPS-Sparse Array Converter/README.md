@@ -6,8 +6,10 @@ A **sparse array** is an array of data in which the majority of the elements hav
 > For instance, the following sparse array  
 | 0 | 0 | 0 | 0 | 0 | 8 | 0 | 0 | 0 | -3 |  
 can be converted to   
-| 5 | 8 | 9 | -3 |
-##### According to the example above, element 8 is in index 5 and element -3 is in index 9.
+| 5 | 8 | 9 | -3 |  
+
+According to the example above, element 8 is in index 5 and element -3 is in index 9.
+
 ---
 
 This program, written in **MIPS assemply**, converts two sparse arrays to a smaller in size arrays using the method explained above, and then if the user wants to, it adds them to one. As assembly isn't one of the most user-friendly programming languages, the code is well documented.
