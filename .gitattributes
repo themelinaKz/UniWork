@@ -1,4 +1,3 @@
-*.sql text diff=SQL
 *.sql linguist-detectable
 
 *.sql binary
