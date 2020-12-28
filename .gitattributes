@@ -1,5 +1,4 @@
 *.sql text diff=SQL
-*.sql linguist-language=PLSQL
 *.sql linguist-detectable
 
 *.sql binary
