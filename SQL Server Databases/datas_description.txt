@@ -1,0 +1,49 @@
+DEPARTMENTS: Table with university's departments' info (Number of entries=10)
+depcode: department's id
+depname: department's name
+
+PUBLISHERS: Table with publishers' info (Number of entries=3448)
+pubid: pulisher's id
+pubname: publisher's name
+
+AUTHORS: Table with authors' info (each author's name is unique) (Number of entries=42018)
+aid: author's id
+author: author's name
+
+STERMS: Table with unique subject terms given to bibliographical entries(Αριθμός εγγραφών=18540)
+tid: subject term's id
+term: subject term's name
+
+BIBRECS: Table with info of bibliographical entries that describe the exhibits of the library's collection (Number of entries=66713)
+bibno: bibliographical file's id
+title: exhibit's title
+material: exhibit's category (book, serial, audiovisual, paper etc.)
+lang: exhibit's language (gre, eng, fre etc.)
+place: place of publication
+series: title of exhibit's series
+pubid: publisher's id
+
+ΒΙΒAUTHORS: Table that connects bibliographical entries to authors (Number of entries=82020)
+bibno: id of bibliographical entry
+aid: author's id
+
+BIBTERMS: Table that connects bibliographical entries to subject terms (Number of entries=396901)
+bibno: id of bibliographical entry
+tid: subject term's id
+
+COPIES: Table with info about copies of each exhibit (Number of entries=85530)
+copyno: copy's id
+bibno: id of bibliographical entry
+copyloc: id of the location of copy (3digit)
+
+BORROWERS: Table with info of members of the library(Number of entries=11287)
+bib: borrower's id
+depcode: department's id
+sex: gender (F=female, M=Male)
+bname: borrower's full name
+
+LOANSTATS: Table with loans record. Each time a member borrows a copy, an entry regarding the transaction is made (Number of entries=91640)
+lid: loan's id
+copyno: copy's id
+bid: borrower's id
+loandate: loan's date
