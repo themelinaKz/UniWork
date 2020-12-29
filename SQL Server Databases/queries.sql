@@ -17,7 +17,7 @@ DROP INDEX [index_title] ON [dbo].[bibrecs]
 
 
 
--- 2. Request to show entries' title whose exhibit's title contains word 'πληροφορική' using index(es) that (maybe) accelerates query's performance
+-- 2. Request to show entries' title whose exhibit's title contains word 'πληροφορική' using index created in Request 1 (in this case it doesn't help)
 CREATE INDEX index_title ON bibrecs(title)
 
 CHECKPOINT
@@ -34,7 +34,7 @@ DROP INDEX [index_title] ON [dbo].[bibrecs]
 
 
 
--- 3. Request to show entries' title and material whose exhibit's title is 'Economics' using index(es) that (maybe) accelerates query's performance
+-- 3. Request to show entries' title and material whose exhibit's title is 'Economics' using index created in Request 1 (in this case it helps)
 CREATE INDEX index_title ON bibrecs(title)
 
 CHECKPOINT
@@ -51,7 +51,7 @@ DROP INDEX [index_title] ON [dbo].[bibrecs]
 
 
 
--- 4. Request to show entries' title and material whose exhibit's title starts with 'Economics' using index(es) that (maybe) accelerates query's performance
+-- 4. Request to show entries' title and material whose exhibit's title starts with 'Economics' using index created in Request 1 (in this case it doesn't help)
 CREATE INDEX index_title ON bibrecs(title)
 
 CHECKPOINT
@@ -68,7 +68,7 @@ DROP INDEX [index_title] ON [dbo].[bibrecs]
 
 
 
--- 5. Request to show entries' title and language whose publisher is 'Κλειδάριθμος' using index(es) that (maybe) accelerates query's performance
+-- 5. Request to show entries' title and language whose publisher is 'Κλειδάριθμος' using index(es) that accelerates query's performance
 CREATE INDEX index_pubname ON publishers(pubname)
 CREATE INDEX index_pubid ON bibrecs(pubid) INCLUDE(title, lang)
 
@@ -87,9 +87,8 @@ DROP INDEX [index_pubid] ON [dbo].[bibrecs]
 
 
 
--- 6. Request to show for each department the total number of loans in 2000 using index(es) that (maybe) accelerates query's performance
+-- 6. Request to show for each department the total number of loans in 2000 using index(es) that accelerates query's performance
 CREATE INDEX index_loandate_bid ON loanstats(loandate, bid)
-CREATE INDEX index_depcode ON borrowers(depcode)
 
 CHECKPOINT
 DBCC DROPCLEANBUFFERS
@@ -103,11 +102,10 @@ GROUP BY depname
 SET STATISTICS IO OFF
 
 DROP INDEX [index_loandate_bid] ON [dbo].[loanstats] 
-DROP INDEX [index_depcode] ON [dbo].[borrowers] 
 
 
 
--- 7. Request to show entries' title, language and author's name whore subject term is 'Databases' using index(es) that (maybe) accelerates query's performance
+-- 7. Request to show entries' title, language and author's name whore subject term is 'Databases' using index(es) that accelerates query's performance
 CREATE INDEX index_tid ON bibterms(tid)
 CREATE INDEX index_term ON sterms(term)
 
@@ -130,7 +128,7 @@ DROP INDEX [index_term] ON [dbo].[sterms]
 
 
 
--- 8. Request to show (with 2-3 different ways) entries' id and book's title for which library has at least one copy at location 'OPA' and at least one copy at location 'ANA'. Fourth query has the best performance, so for this query it's requested to accelerate its performance using index(es).
+-- 8. Request to show (with 2-4 different ways) entries' id and book's title for which library has at least one copy at location 'OPA' and at least one copy at location 'ANA'. Fourth query has the best performance, so for this query it's requested to accelerate its performance using index(es).
 /*1st way with INTERSECT*/
 CHECKPOINT
 DBCC DROPCLEANBUFFERS
