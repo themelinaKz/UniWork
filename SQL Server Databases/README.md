@@ -18,7 +18,7 @@ In the **1<sup>st</sup> Part**, the database *LIBRARY* is created.
 ## Part 2  
 In the **2<sup>nd</sup> Part**, the database *LIBDW* (Library Data Warehouse) is created using the data of *LIBRARY* database.  
 - **Create_DataWarehouse.sql** contains all scripts to create and load the Star Schema Data Warehouse.  
-![Warehouse Star Schema](/Additional_files/star_schema.png)
+![Warehouse Star Schema](https://github.com/themelinaKz/UniWork/blob/master/SQL%20Server%20Databases/Additional_files/star_schema.png?raw=true)
 - **warehouse_scripts.sql** contains queries that help in statistical analysis of loans per different factors, such as time or gender.
 - **data_cube.sql** contains scripts that create the same **data cube**, but in different ways.
 
