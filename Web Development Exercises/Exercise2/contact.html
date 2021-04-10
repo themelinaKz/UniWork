@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="el">
+    <head>
+        <title> Φόρμα Επικοινωνίας </title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Themelina Kouzoumpasi">
+        <meta name="description" content="Contact Form - Exercise2 (subject: Technologies and Programming of Web Applications)">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <a href="index.html">Αρχική</a> |
+                <a href="projects.html">Projects</a> |
+                <a href="contact.html">Επικοινωνία</a>
+            </nav>
+        </header>
+
+        <article>
+            <h1>Φόρμα Επικοινωνίας</h1>
+            <section>
+                <h4>Εγκυρότητα στοιχείων</h4>
+                Συμπληρώστε την παρακάτω φόρμα επικοινωνίας και θα επικοινωνήσω εγώ μαζί σας εντός 2 ημερών. 
+                Παρακαλώ ελέγξτε την εγκυρότητα των στοιχείων επικοινωνίας ώστε να είναι δυνατή η επικοινώνια.
+            </section>
+            <section>
+                <h4>Λόγοι αποφυγής</h4>
+                Αν θέλετε να ενημερωθείτε σχετικά με τα projects που έχω υλοποιήσει παρακαλώ αποφύγετε να χρησιμοποιήσετε την παρακάτω φόρμα.
+                <br>Μπορείτε να απευθυνθείτε στην καρτέλα Projects, ή να δείτε άμεσα κάποια απ' τα υλοποιημένα έργα 
+                εντός του λογαριασμού μου στο <a href="#github">GitHub</a> ή στο <a href="#linkedIn">LinkedIn</a>. 
+            </section>
+        </article>
+
+        <main>
+            <form action="mailto:p3170076@aueb.gr" method="GET">
+                <br>
+                <fieldset>
+                    <legend>Ονοματεπώνυμο</legend>
+                    <p>Όνομα  <input type="text" id="firstname" name="firstname" maxlength="30" required></p>
+                    <p>Επίθετο <input type="text" id="lastname" name="lastname" maxlength="30" required></p>
+                </fieldset>
+                <fieldset>
+                    <legend>Τρόπος επικοινωνίας</legend>
+                    <p>E-mail <input type="email" id="email" name="email" placeholder="email@example.com" required></p>
+                    <p>Τηλέφωνο <input type="tel" id="phone" name="phone" required></p>
+                    <label for="preference">Προτίμηση</label>
+                    <select name="preference" id="preference">
+                        <option selected>Email</option>
+                        <option>Τηλέφωνο</option>
+                    </select>
+                    <strong><dfn title="Δηλώστε με ποιον τρόπο προτιμάτε να επικοινωνήσω μαζί σας">?</dfn></strong>
+                </fieldset>
+                <fieldset>
+                    <legend>Μήνυμα</legend>
+                    <textarea name="message" id="message" cols="50" rows="10" required></textarea>
+                </fieldset>
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </main>
+        
+        <br><br>
+        <hr>
+        <footer>
+            <address>
+                <table>
+                    <tr>
+                        <th id="go_back_empty"></th>
+                        <th id="footer_projects">Projects</th>
+                        <th id="footer_contact">Στοιχεία Επικοινωνίας</th>
+                        <th id="footer_more">Άλλες πληροφορίες</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="../index.html">Go to external <br>index.html</a>
+                        </td>
+                        <td>
+                            <ul>
+                                <li> <a href="projects.html#minipython">MiniPython Compiler</a></li>
+                                <li> <a href="projects.html#washing">Washing Machine Interface</a></li>
+                                <li> <a href="projects.html#streaming">Music Streaming Service</a></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li id="github"><img src="github.png" width="15" height="15" alt="github logo">
+                                <a href="https://github.com/themelinaKz">https://github.com/themelinaKz</a>
+                                </li>
+                                <li><img src="mail.png" width="15" height="15" alt="Personal Email">
+                                    thkouzoumpasi@gmail.com
+                                </li>
+                                <li>
+                                    <img src="https://www.aueb.gr/sites/default/files/3_AUEB-emblem-LR.jpg" width="18" height="18" alt="University Email">
+                                    p3170076@aueb.gr
+                                </li>
+                                <li id="linkedIn"><img src="linkedIn.png" width="15" height="15" alt="LinkedIn">
+                                    <a href="https://www.linkedin.com/in/themelina-kouzoumpasi/">https://www.linkedin.com/in/themelina-kouzoumpasi/</a>
+                                </li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Φοιτήτρια Πληροφορικής, <br>Οικονομικό Πανεπιστήμιο Αθηνών</li>
+                                <li>Μαρούσι, Αττική</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </address>
+        </footer>
+    </body>
+</html>
