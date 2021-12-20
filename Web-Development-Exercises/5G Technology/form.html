@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="el">
+    <head>
+        <title> Support us </title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Themelina Kouzoumpasi">
+        <meta name="description" content="Form Page - Exercise8 (subject: Technologies and Programming of Web Applications)">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <a href="index.html">Αρχική</a> 
+                <a href="history.html">1/2/3/4G to 5G</a> 
+                <a href="future.html">Εφαρμογές στο μέλλον</a>
+                <div id="date"></div>
+            </nav>
+        </header>
+
+        <aside class="left-aside">
+            <h4>Περιεχόμενα</h4>
+            <ul>
+                <li><a href="#1">Προσωπικά στοιχεία</a></li>
+                <li><a href="#2">Στοιχεία σύνδεσης</a></li>
+                <li><a href="#3">Δεξιότητες</a></li>
+                <li><a href="#4">Ενδιαφέροντα</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <h2>Φόρμα υποστήριξης</h2>
+            <p>Θέλετε να υποστηρίξετε το έργο μας συνεισφέροντας; </p> 
+            <p>Συμπληρώστε την παρακάτω φόρμα και αναλαμβάνουμε εμείς τα υπόλοιπα!</p>
+            <form action="toWebServer" method="POST" autocomplete="on">
+                <fieldset id="1">
+                    <legend>Προσωπικά Στοιχεία</legend>
+                    <label for="firstName">
+                        <span>Όνομα</span> 
+                        <input type="text" id="firstName" name="firstName" maxlength="30" required>
+                        <span class="warning"></span>
+                    </label> 
+                    <label for="lastName">
+                        <span>Επίθετο</span> 
+                        <input type="text" id="lastName" name="lastName" maxlength="30" required>
+                        <span class="warning"></span>
+                    </label> 
+                    <label for="birthday">
+                        <span>Ημερομηνία Γεννήσεως</span>
+                        <input type="date" name="birthday" id="birthday" required>
+                        <span class="warning"></span> 
+                    </label>
+                    
+                    <fieldset id="addressInfo">
+                        <legend>Διεύθυνση</legend>
+                        <label for="address">
+                            <span>Οδός</span>
+                            <input type="text" name="address" id="address" required>
+                            <span class="warning"></span>
+                        </label> 
+                        <label for="addressNumber">
+                            <span>Αριθμός</span>
+                            <input type="number" name="addressNumber" id="addressNumber" required>
+                            <span class="warning"></span>
+                        </label> 
+                        <label for="country">
+                            <span>Χώρα</span>
+                            <input type="text" name="country" id="country" required>
+                            <span class="warning"></span>
+                        </label>
+                    </fieldset>
+                    
+                    <label for="email">
+                        <span>Email</span>
+                        <input type="email" name="email" id="email" placeholder="example@mail.com" required>
+                        <span class="warning"></span>
+                    </label>
+                    
+                    <details> 
+                        <summary>Τηλέφωνο</summary>
+                        <p> Μπορείτε να προσθέσετε μέχρι 3 νούμερα, σταθερά ή κινητά.</p>
+                    </details>
+                    <div>
+                        <select name="phone" class="phone">
+                            <option value="landline">Σταθερό</option>
+                            <option value="cellphone">Κινητό</option>
+                        </select>
+                        <input type="tel" maxlength="15" name="phoneIn1" id="phoneIn1" required> 
+                        <span class="warning"></span>
+                        <button class="addButton" type="button" onclick="addPhone()" id="addPhone1">+</button>
+                    </div>
+
+                    <div id="phone2" style="visibility: hidden;">
+                        <select name="phone2">
+                            <option value="landline">Σταθερό</option>
+                            <option value="cellphone">Κινητό</option>
+                        </select>
+                        <input type="tel" maxlength="15" name="phoneIn2" id="phoneIn2">  
+                        <span class="warning"></span>
+                        <button class="addButton" type="button" onclick="addPhone()" id="addPhone2">+</button>
+                        <button class="removeButton" type="button" onclick="removePhone(2)" id="removePhone2">-</button>
+                    </div>
+
+                    <div id="phone3" style="visibility: hidden;">
+                        <select name="phone3">
+                            <option value="landline">Σταθερό</option>
+                            <option value="cellphone">Κινητό</option>
+                        </select>
+                        <input type="tel" maxlength="15" name="phoneIn3" id="phoneIn3">                         
+                        <span class="warning"></span>
+                        <button class="removeButton" type="button" onclick="removePhone(3)">-</button>
+                    </div>
+
+                    <details> 
+                        <summary>Μητρική γλώσσα</summary>
+                        <p> Μπορείτε να προσθέσετε μέχρι 2 γλώσσες.</p>
+                    </details>
+                    <div>
+                        <label for="language1">1η γλώσσα
+                            <input list="languages" type="text" name="language1" id="language1" required>
+                            <span class="warning"></span>
+                        </label>
+                        <button class="addButton" onclick="addLanguage()" id="addLanguage1" type="button">+</button>
+                    </div>
+                    <div id="language_2" style="visibility: hidden;">
+                        <label for="language2">2η γλώσσα</label>
+                        <input type="text" name="language2" id="language2">                        
+                        <span class="warning"></span>
+                        <button class="removeButton" onclick="removeLanguage()" type="button">-</button>
+                    </div>
+                    <datalist id="languages">
+                        <option value="Ελληνικά"></option>                        
+                        <option value="Αγγλικά"></option>
+                        <option value="Γερμανικά"></option>
+                        <option value="Γαλλικά"></option>
+                        <option value="Ισπανικά"></option>
+                        <option value="Ιταλικά"></option>
+                        <option value="Ολλανδικά"></option>
+                        <option value="Σουηδικά"></option>
+                    </datalist>
+
+
+                </fieldset>
+
+                <fieldset id="2">
+                    <legend>Στοιχεία σύνδεσης</legend>
+                    <label for="username">
+                        <span>username</span>
+                        <input type="text" maxlength="20" name="username" id="username" required>
+                        <span class="warning"></span>
+                    </label>
+                    <label for="password">
+                        <span>password</span>
+                        <input type="password" name="password" id="password" minlength="7" required>
+                        <span class="warning"></span>
+                    </label>
+                    <label for="passwordConfirm">
+                        <span>repeat password</span>
+                        <input type="password" name="passwordConfirm" id="passwordConfirm" minlength="7" required>
+                        <span class="warning"></span>
+                    </label>
+                </fieldset>
+
+                <fieldset id="3">
+                    <legend>Δεξιότητες</legend>
+                    <label for="progLanguage">
+                        <span>Αγαπημένη Γλώσσα</span>
+                        <input type="text" list="progLanguages" name="progLanguage" id="progLanguage" onkeyup="updateProgLanguages()" required>
+                        <span class="warning"></span>
+                    </label>
+                    <datalist id="progLanguages">
+                        <option value="Java" id="java"></option>
+                        <option value="C++" id="cpp"></option>
+                        <option value="C" id="c"></option>
+                        <option value="C#" id="cSharp"></option>
+                        <option value="Python" id="python"></option>
+                        <option value="JavaScript" id="javascript"></option>
+                        <option value="PHP" id="php"></option>
+                    </datalist>
+
+                    <div id="otherLanguages">
+                        <span>Άλλες γλώσσες:</span> 
+                        <input type="checkbox" name="lang_java" id="lang_java" value="java">
+                        <label for="lang_java">Java</label> <br>
+                        <input type="checkbox" name="lang_cpp" id="lang_cpp" value="cpp">
+                        <label for="lang_cpp">C++</label> <br>
+                        <input type="checkbox" name="lang_c" id="lang_c" value="c">
+                        <label for="lang_c">C</label> <br>
+                        <input type="checkbox" name="lang_cSharp" id="lang_cSharp" value="cSharp">
+                        <label for="lang_cSharp">C#</label> <br>
+                        <input type="checkbox" name="lang_python" id="lang_python" value="python">
+                        <label for="lang_python">Python</label> <br>
+                        <input type="checkbox" name="lang_javascript" id="lang_javascript" value="javascript">
+                        <label for="lang_javascript">JavaScript</label> <br>
+                        <input type="checkbox" name="lang_php" id="lang_php" value="php">
+                        <label for="lang_php">PHP</label> <br>
+
+                        <input type="checkbox" name="ch_other" id="ch_other">
+                        <label for="ch_other">Άλλη</label>
+                        <input type="text" maxlength="15" name="lang_other" id="lang_other" style="visibility: hidden;" required>
+                        <span class="warning"></span>
+                    </div>
+
+                    <div id="whatEnd">
+                        <span> Με τι ασχολείστε περισσότερο;</span> 
+                        <input type="radio" name="whatEnd" id="frontEnd" value="frontEnd">
+                        <label for="frontEnd">front-end</label> <br>
+                        <input type="radio" name="whatEnd" id="backEnd" value="backEnd">
+                        <label for="backEnd">back-end</label> <br>
+                        <input type="radio" name="whatEnd" id="fullstack" value="fullstack">
+                        <label for="fullstack">fullstack</label>
+                        <span class="warning"></span>
+                    </div>                        
+                    
+                    <br>
+                    <label for="github">
+                        <span id="githubLabel">Έχετε λογαριασμό GitHub; Αν ναι παρακαλώ γράψτε το username σας, ώστε να συμπληρωθεί η διεύθυνση URL προς τον λογαριασμό σας.</span>
+                        <span>https://github.com/</span>
+                        <input type="text" name="github" id="github">
+                        <span class="warning"></span>
+                    </label>
+                </fieldset>
+
+                <fieldset id="4">
+                    <legend>Ενδιαφέροντα</legend>
+                    <details open>
+                        <summary>Αθλήματα</summary>
+                        <p>Γράψτε ένα άθλημα ανά γραμμή. Επιτρέπονται μόνο ελληνικοί και λατινικοί χαρακτήρες.</p>
+                    </details>
+                    <textarea name="sports" id="sports" cols="20" rows="5" placeholder="κολύμβηση&#10;τζόκινγκ&#10;κατάδυση"></textarea>
+                    <span class="warning"></span>
+                    
+                    <div id="volunteer">
+                        <span>Έχετε προσφέρει εθελοντικά κάπου;</span>
+                        <input type="radio" name="volunteer" id="volunteerYes" value="volunteerYes" checked>
+                        <label for="volunteerYes">Ναι</label> <br>
+                        <input type="radio" name="volunteer" id="volunteerNo" value="volunteerNo">
+                        <label for="volunteerNo">Όχι</label> 
+                        <span class="warning"></span>
+                    </div>
+                </fieldset>
+
+                <button type="button" value="submit" id="submit">Αποθήκευση</button>
+            </form>
+        </main>
+        
+        <aside class="right-aside">
+            <div id="did-you-know">
+                <h2>Πώς μπορώ να συνεισφέρω;</h2>
+                <ul>
+                    <li>μπορείς να βοηθήσεις στη <em>δημιουργία νέου περιεχομένου</em> που αφορά νέες τεχνολογίες</li>
+                    <li>μπορείς να βοηθήσεις στο front ή και back end της ιστοσελίδας</li>
+                    <li>μπορείς να βοηθήσεις στο κομμάτι του <em>marketing</em></li>
+                    <li> <em>Μπορείς να βοηθήσεις</em> όπως μπορείς!</li>
+                </ul>
+                <br>
+                <em> Συνείσφερε μία φορά ή γίνε μέλος της ομάδας μας!</em>
+            </div>
+        </aside>
+
+        <footer>
+            <div class="external">
+                <a href="../index.html" class="external">Go to external index</a>
+            </div> 
+            <div>
+                <h4>Αρχική</h4>
+                <ul>
+                    <li><a href="index.html#what-is-5G">Τι είναι το 5G;</a></li>
+                    <li><a href="index.html#what-makes-the-difference">Τι κάνει τη διαφορά;</a></li>
+                    <li><a href="index.html#5G-usages">Τομείς εφαρμογής</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>1/2/3/4G to 5G</h4>
+                <ul>
+                    <li><a href="history.html#1G">1G: Φωνή</a></li>
+                    <li><a href="history.html#2G">2G: SMS & MMS</a></li>
+                    <li><a href="history.html#3G">3G: Internet</a></li>
+                    <li><a href="history.html#4G">4G: Μετάδοση σε πραγματικό χρόνο - Σήμερα</a></li>
+                    <li><a href="history.html#5G">5G: Τι αλλάζει</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Εφαρμογές στο μέλλον</h4>
+                <ul>
+                    <li><a href="#media">Μέσα Κοινωνικής Δικτύωσης & Ψυχαγωγία</a></li>
+                    <li><a href="#smart-factories">Smart Factories</a></li>
+                    <li><a href="#healthcare">Υγεία</a></li>
+                    <li><a href="#smart-cities">Έξυπνες πόλεις</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

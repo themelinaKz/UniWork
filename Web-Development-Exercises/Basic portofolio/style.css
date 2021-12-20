@@ -1,0 +1,120 @@
+html {
+    background-image: linear-gradient(black, rgb(3, 99, 3),cyan);
+    background-size: auto;
+}
+
+.body-except-footer {
+    background-image: url(triangle_pattern.png), linear-gradient(black, rgb(3, 99, 3),cyan);
+    background-size: 0.8cm;
+    width: auto;
+    height: auto;
+    padding: 20px;
+}
+
+main {
+    background-color: aliceblue;
+    width: 80%;
+    padding: 20px;
+    margin: auto;
+    border-radius: 20px 20px 20px 20px;
+}
+
+em {
+    font-size: smaller;
+}
+
+section {
+    margin-top: 1cm;
+}
+
+ul {
+    list-style: circle;
+}
+
+/* Navigation Bar */
+nav {
+    padding-left: 200px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15pt;
+    padding-bottom:2%;
+    margin-top: -0.2cm;
+}
+nav a {
+    color: aqua;
+    padding-right: 2cm;
+    vertical-align:baseline;
+}
+
+/* Headers and Paragraphs*/
+h, p {
+    font-family:'Times New Roman', Times, serif;
+}
+p {
+    float:inline-start;
+}
+h1 {
+    text-align: center;
+    font-size: 20pt;
+}
+
+/* Output of code in Projects page*/
+#code-output {
+    float: right;
+    margin-top: -14px;
+}
+#code-output code:last-child{
+    border-top: 1px dotted black;
+    display: block;
+}
+
+iframe {
+    float: right;
+}
+
+/* Contents in Projects page*/
+#contents {
+    border: 3px dashed rgb(18, 85, 5);
+    margin-left: 1cm;
+    margin-right: 5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    font-size: 12pt;
+    font-style: italic;
+    float: right;
+}
+#contents h4 {
+    font-size: 12pt;
+    font-style: normal;
+    line-height: 0;
+}
+#contents ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Links */
+a:hover,.urls a:hover {
+    color: purple;
+}
+a:active,.urls a:active {
+    color: orange;
+}
+.urls a {
+    color: blue;
+}
+
+.external a {
+    color: purple;
+}
+
+/* Footer */
+address {
+    margin-left: 10em;
+}
+address div {
+    float: left;
+}
+.footer_headings {
+    margin-left: 5em;
+    font-weight: bold;
+}
