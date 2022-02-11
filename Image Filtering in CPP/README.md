@@ -15,7 +15,7 @@ This filter requires two arguments, **a** and **c**, which are 3-digit vectors. 
 
 | Original         | -f linear 2 2 2 0 0 0     |
 |:--------------:|:-----------:|
-| ![original](https://github.com/themelinaKz/UniWork/blob/master/Image%20Filtering%20in%20Cpp/images/original.png) | ![linera](https://github.com/themelinaKz/UniWork/blob/master/Image%20Filtering%20in%20Cpp/images/linear_only.png) |
+| ![original](https://github.com/themelinaKz/UniWork/blob/master/Image%20Filtering%20in%20Cpp/images/original.png) | ![linera](https://github.com/themelinaKz/UniWork/blob/master/Image%20Filtering%20in%20Cpp/images/linear_only.png?raw=True) |
 
 
 ### GammaFilter
@@ -24,7 +24,7 @@ This filter requires one argument, **g** , which is a float number between 0.5 a
 
 | Original         | -f gamma 2.0 -f linear -1 -1 -1 1 1 1     |
 |:--------------:|:-----------:|
-| ![original](https://github.com/themelinaKz/UniWork/blob/master/Image%20Filtering%20in%20Cpp/images/original.png) | ![linera](https://github.com/themelinaKz/UniWork/blob/master/Image%20Filtering%20in%20Cpp/images/linear_gamma.png) |
+| ![original](https://github.com/themelinaKz/UniWork/blob/master/Image%20Filtering%20in%20Cpp/images/original.png) | ![linera](https://github.com/themelinaKz/UniWork/blob/master/Image%20Filtering%20in%20Cpp/images/linear_gamma.png?raw=True) |
 
 ### BlurFilter
 This filter requires one argument, **g** , which is a float number between 0.5 and 2. The concept of this filter is FilterBlur
