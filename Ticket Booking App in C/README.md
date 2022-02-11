@@ -17,7 +17,7 @@ There are three main reasons why a transaction may fail.
 ## Theater's Plan
 The theater consists of three zones, each having different number of rows and different seat cost. Each row has a standard number of seats, equal to N<sub>seats</sub>.
 
-![Theater Plan](https://github.com/themelinaKz/UniWork/blob/master/Tickets%20Booking%20App%20in%20C/theater_plan.png)
+![Theater Plan](https://github.com/themelinaKz/UniWork/blob/master/Ticket%20Booking%20App%20in%20C/theater_plan.png?raw=True)
 
 ## Inputs
 - **N<sub>cust</sub>**: the number of customers
